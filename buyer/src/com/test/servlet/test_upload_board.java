@@ -115,7 +115,7 @@ public class test_upload_board extends HttpServlet {
 			}
 			
 			b.setBoard_num(empty_num);
-			
+			b.setStatus("null");
 			abm.setB(b);
 			abm.createBoard();
 			

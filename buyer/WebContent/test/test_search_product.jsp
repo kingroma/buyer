@@ -352,7 +352,7 @@ function hidden_show_product_detail(num){
 	setTimeout(function(){
 		$('#hidden_show_product_detail_0').fadeIn(500);
 	},100);
-	var url = "http://localhost:8080/buyer/test_showproduct_detail?product_num="+num+"&buyer_id=<%=buyer_id%>";
+	var url = "<%=ManagerStaticAttribute.testBuyerUrl%>/test_showproduct_detail?product_num="+num+"&buyer_id=<%=buyer_id%>";
 	//$('#show_board_detail_iframe_show').attr("src", "http://localhost:8080/buyer/test_showboard_detail?board_num="+num);
 	
 	$('#show_product_detail_iframe_show').attr("src", url);

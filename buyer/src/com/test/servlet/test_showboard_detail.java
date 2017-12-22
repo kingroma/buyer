@@ -47,10 +47,17 @@ public class test_showboard_detail extends HttpServlet {
 		Admin_BoardManager abm = new Admin_BoardManager(null);
 		
 		Board b = abm.getBoard(board_num);
+		//abm.setB(b);
 		
+		//b.setStatus("null");
+		//abm.fixBoard(b);
+		//abm.setB(b);
 		abm.upSeeCount(board_num, buyer_id);
 		
+		System.out.println(b.getTitle());
+		System.out.println(b.getStatus());
 		if(b.getStatus()==null){
+			System.out.println(1);
 			RequestDispatcher rd = request.getRequestDispatcher("/test/test_showboard_detail.jsp");
 			
 			request.setAttribute("board",b);
@@ -58,17 +65,24 @@ public class test_showboard_detail extends HttpServlet {
 			rd.forward(request,response);
 		}
 		else if(b.getStatus().equals("null")){
+			System.out.println(2);
 			RequestDispatcher rd = request.getRequestDispatcher("/test/test_showboard_detail.jsp");
 			
 			request.setAttribute("board",b);
 			
 			rd.forward(request,response);
 		}else if(b.getStatus().equals("error")){
+			System.out.println(3);
 			RequestDispatcher rd = request.getRequestDispatcher("/test/test_showboard_detail_error.jsp");
 			
 			//request.setAttribute("board",b);
 			
 			rd.forward(request,response);
+		}else {//여기가 문제 
+			//System.out.println(4);
+			//RequestDispatcher rd = request.getRequestDispatcher("/test/test_showboard_detail.jsp");
+			
+			//request.setAttribute("board",b);
 		}
 		
 		//abm.fixBoard(b);

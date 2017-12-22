@@ -364,7 +364,7 @@ function hidden_show_board_detail(num){
 	},100);
 	//hidden_show_board_detail_
 	//$('#').reload();
-	var url = "http://localhost:8080/buyer/test_showboard_detail?board_num="+num+"&buyer_id=<%=buyer_id%>";
+	var url = "<%=ManagerStaticAttribute.testBuyerUrl%>/test_showboard_detail?board_num="+num+"&buyer_id=<%=buyer_id%>";
 	//$('#show_board_detail_iframe_show').attr("src", "http://localhost:8080/buyer/test_showboard_detail?board_num="+num);
 	
 	
@@ -436,7 +436,7 @@ function iframe_show_detail_click_init(){
 
 function iframe_show_detail_click_order_num(order_num){
 	iframe_show_detail_click_init();
-	var url = "http://localhost:8080/buyer/test_myinfo_order_detail?order_num="+order_num;
+	var url = "<%=ManagerStaticAttribute.testBuyerUrl%>/test_myinfo_order_detail?order_num="+order_num;
 	$('#iframe_show_detail_X').fadeIn(600);
 	$('#iframe_show_detail').css("display","none");
 	$('#iframe_show_detail').fadeIn(500);
@@ -452,7 +452,7 @@ function iframe_show_detail_click_order_num_X(){
 }
 function iframe_show_detail_comment_click_order_num(order_num){
 	iframe_show_detail_click_init();
-	var url = "http://localhost:8080/buyer/test_myinfo_order_detail_comment?order_num="+order_num;
+	var url = "<%=ManagerStaticAttribute.testBuyerUrl%>/test_myinfo_order_detail_comment?order_num="+order_num;
 	$('#iframe_show_detail_comment_X').fadeIn(600);
 	$('#iframe_show_detail_comment').css("display","none");
 	$('#iframe_show_detail_comment').fadeIn(500);
@@ -720,7 +720,7 @@ function buyer_hidden_div_open(){
 								scrolling="no"
 								id=""
 								style="border:0px;overflow:hidden;width:600px;height:60px;padding:0px;margin:0px;"
-								src="http://localhost:8080/buyer/test_myinfo_order?order_num=<%=order_list.get(i).getOrder_num()%>">
+								src="<%=ManagerStaticAttribute.testBuyerUrl%>/test_myinfo_order?order_num=<%=order_list.get(i).getOrder_num()%>">
 								
 								</iframe>
 								

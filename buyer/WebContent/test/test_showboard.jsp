@@ -368,7 +368,8 @@ function hidden_show_board_detail(num){
 	},100);
 	//hidden_show_board_detail_
 	//$('#').reload();
-	var url = "http://localhost:8080/buyer/test_showboard_detail?board_num="+num+"&buyer_id=<%=buyer_id%>";
+	var url = "<%=ManagerStaticAttribute.testBuyerUrl%>/test_showboard_detail?board_num="+num+"&buyer_id=<%=buyer_id%>";
+	//http://http//localhost:8080/buyer/test_showboard_detail?board_num=b40&buyer_id=%EB%A1%9C%EA%B7%B8%EC%9D%B8
 	//$('#show_board_detail_iframe_show').attr("src", "http://localhost:8080/buyer/test_showboard_detail?board_num="+num);
 	
 	
@@ -587,7 +588,7 @@ function alertMSG(msg){
 									style="z-index:99;margin-top:10px;display:none;position:fixed;background-color:white;width:600px;height:450px;">
 										<iframe id=""
 											style="position:absolute;z-index:99;width:600px;height:450px;border:0px;padding:0px;margin:0px;"
-											src="http://localhost:8080/buyer/test_upload_board">
+											src="<%=ManagerStaticAttribute.testBuyerUrl%>/test_upload_board">
 										
 										</iframe>
 									</div>

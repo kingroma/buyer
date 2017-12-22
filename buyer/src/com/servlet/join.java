@@ -15,7 +15,7 @@ import com.buyer.Buyer;
 import com.common.CurrentTime;
 import com.common.ManagerStaticAttribute;
 import com.manager.Admin_BuyerManager;
-import com.seller.Seller;
+import com.oreilly.servlet.MultipartRequest;
 
 /**
  * Servlet implementation class join
@@ -49,7 +49,10 @@ public class join extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-
+		
+		MultipartRequest multi = new MultipartRequest(request, null);
+		
+		
 		response.setCharacterEncoding("UTF-8");
 		request.setCharacterEncoding("UTF-8");
 		
